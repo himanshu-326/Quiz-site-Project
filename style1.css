@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    color: #fff;
+    background: #09001d;
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%; /* Adjusted padding for responsiveness */
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px; /* Adjusted font size for responsiveness */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+.navbar a {
+    font-size: 16px; /* Adjusted font size for responsiveness */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 15px; /* Adjusted margin for responsiveness */
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #c40094;
+}
+
+.main {
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto;
+    transition: .3s ease;
+}
+
+.main.active {
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Adjusted flex direction for responsiveness */
+    height: 100vh;
+    width: 100%; /* Adjusted width for responsiveness */
+}
+
+.home,
+.quiz-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content,
+.quiz-box,
+.result-box {
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 36px; /* Adjusted font size for responsiveness */
+}
+
+.home-content p {
+    font-size: 14px; /* Adjusted font size for responsiveness */
+    margin-bottom: 20px; /* Adjusted margin for responsiveness */
+}
+
+.home-content .start-btn {
+    width: 100%;
+    max-width: 190px;
+    height: 45px;
+    font-size: 14px; /* Adjusted font size for responsiveness */
+}
+
+.popup-info {
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 400px; /* Adjusted max-width for responsiveness */
+}
+
+.popup-info h2 {
+    font-size: 32px; /* Adjusted font size for responsiveness */
+}
+
+.popup-info .info {
+    font-size: 14px; /* Adjusted font size for responsiveness */
+}
+
+.popup-info .btn-group {
+    flex-direction: column; /* Adjusted flex direction for responsiveness */
+    align-items: center;
+    margin-top: 15px; /* Adjusted margin for responsiveness */
+}
+
+.popup-info .btn-group .info-btn {
+    width: 100%;
+    max-width: 130px; /* Adjusted max-width for responsiveness */
+    font-size: 14px; /* Adjusted font size for responsiveness */
+}
+
+.quiz-box h1 {
+    font-size: 24px; /* Adjusted font size for responsiveness */
+}
+
+.quiz-box .quiz-header {
+    padding: 15px 0; /* Adjusted padding for responsiveness */
+    margin-bottom: 20px; /* Adjusted margin for responsiveness */
+}
+
+.quiz-box .quiz-header span {
+    font-size: 14px; /* Adjusted font size for responsiveness */
+}
+
+.quiz-box .question-text {
+    font-size: 18px; /* Adjusted font size for responsiveness */
+}
+
+.option-list .option {
+    font-size: 14px; /* Adjusted font size for responsiveness */
+    margin: 10px 0; /* Adjusted margin for responsiveness */
+}
+
+.quiz-footer .question-total {
+    font-size: 14px; /* Adjusted font size for responsiveness */
+}
+
+.quiz-footer .next-btn {
+    width: 80px; /* Adjusted width for responsiveness */
+    height: 35px; /* Adjusted height for responsiveness */
+    font-size: 14px; /* Adjusted font size for responsiveness */
+    margin-top: 10px; /* Adjusted margin for responsiveness */
+}
+
+.percentage-container {
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 300px; /* Adjusted max-width for responsiveness */
+    margin: 15px 0 30px; /* Adjusted margin for responsiveness */
+}
+
+.circular-progress {
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 250px; /* Adjusted max-width for responsiveness */
+    height: 250px;
+}
+
+.circular-progress::before {
+    width: 80%; /* Adjusted width for responsiveness */
+    height: 80%; /* Adjusted height for responsiveness */
+}
+
+.circular-progress .progress-value {
+    font-size: 24px; /* Adjusted font size for responsiveness */
+}
+
+.score-text {
+    font-size: 16px; /* Adjusted font size for responsiveness */
+}
+
+.buttons button {
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 130px; /* Adjusted max-width for responsiveness */
+    height: 40px; /* Adjusted height for responsiveness */
+    font-size: 14px; /* Adjusted font size for responsiveness */
+    margin: 0 0 10px; /* Adjusted margin for responsiveness */
+}
+
+@media only screen and (min-width: 600px) {
+    .header {
+        padding: 20px 10%; /* Restored padding for larger screens */
+    }
+
+    .logo {
+        font-size: 32px; /* Restored font size for larger screens */
+    }
+
+    .navbar a {
+        font-size: 18px; /* Restored font size for larger screens */
+        margin-left: 35px; /* Restored margin for larger screens */
+    }
+
+    .home-content h1 {
+        font-size: 78px; /* Restored font size for larger screens */
+    }
+
+    .home-content p {
+        font-size: 16px; /* Restored font size for larger screens */
+        margin-bottom: 30px; /* Restored margin for larger screens */
+    }
+
+    .home-content .start-btn {
+        font-size: 18px; /* Restored font size for larger screens */
+    }
+
+    .popup-info {
+        max-width: 500px; /* Restored max-width for larger screens */
+    }
+
+    .popup-info h2 {
+        font-size: 50px; /* Restored font size for larger screens */
+    }
+
+    .popup-info .info {
+        font-size: 16px; /* Restored font size for larger screens */
+    }
+
+    .popup-info .btn-group .info-btn {
+        max-width: 130px; /* Restored max-width for larger screens */
+        font-size: 16px; /* Restored font size for larger screens */
+    }
+
+    .quiz-box h1 {
+        font-size: 32px; /* Restored font size for larger screens */
+    }
+
+    .quiz-box .quiz-header span {
+        font-size: 18px; /* Restored font size for larger screens */
+    }
+
+    .quiz-box .question-text {
+        font-size: 24px; /* Restored font size for larger screens */
+    }
+
+    .option-list .option {
+        font-size: 17px; /* Restored font size for larger screens */
+        margin: 15px 0; /* Restored margin for larger screens */
+    }
+
+    .quiz-footer .question-total {
+        font-size: 16px; /* Restored font size for larger screens */
+    }
+
+    .quiz-footer .next-btn {
+        font-size: 16px; /* Restored font size for larger screens */
+    }
+
+    .result-box h2 {
+        font-size: 52px; /* Restored font size for larger screens */
+    }
+
+    .percentage-container .circular-progress {
+        width: 250px; /* Restored width for larger screens */
+        max-width: 300px; /* Restored max-width for larger screens */
+        margin: 20px 0 40px; /* Restored margin for larger screens */
+    }
+
+    .buttons button {
+        width: 130px; /* Restored width for larger screens */
+        max-width: 150px; /* Restored max-width for larger screens */
+        font-size: 16px; /* Restored font size for larger screens */
+        margin: 0 20px 20px; /* Restored margin for larger screens */
+    }
+}
